@@ -9,6 +9,7 @@
 </head>
 <body>
 
+<div class = "wrap">
 <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -46,6 +47,15 @@
 <% end %>
 <br/>
 <%= yield %>
+</div>
+<br class="clr" />
+  <div id="footer">
+    <div class="container">
+      <b>Teachers</b>
+      <br />
+      <%= link_to 'Take a course', new_instructor_course_path %>
+    </div>
+  </div>
 </body>
 </html>
 

@@ -14,6 +14,9 @@ gem 'sass-rails'
 # for user authentication
 gem 'devise','>= 3.2.4'
 
+# for simple form
+gem 'simple_form'
+
 # Use postgresql as the database for Active Record
 gem 'pg'
 
