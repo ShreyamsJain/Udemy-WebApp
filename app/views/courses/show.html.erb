@@ -8,10 +8,10 @@
 	    <%= number_to_currency @course.cost %>
   	</span>
 
-  	<% if current_user && current_user == @course_user %>
+  	<% if current_user && current_user == @course.user %>
   		<br/><br/>
   		<%= link_to 'Administer', instructor_course_path(@course), class: 'btn btn-danger btn-large'%>
-  	<% end %>
+    <% end %>
   </div>
 
   <div class="col-sm-8 col-xs-12">
