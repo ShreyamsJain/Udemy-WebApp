@@ -5,7 +5,10 @@ Udemy::Application.routes.draw do
 
   resources :courses, only: [:index, :show]
   namespace :instructor do
-    resources :courses, only: [:new, :create, :show, :destroy] do 
+    resources :sections, only: [] do
+      resources :lessons, only: [:new, :create, :destroy]
+    end
+    resources :courses, only: [:new, :create, :show, :destroy] do
       resources :sections, only: [:new, :create, :destroy]
     end
   end
