@@ -11,6 +11,14 @@ gem 'bootstrap-sass', '~> 3.3.5.1'
 gem 'sprockets', '2.11.0'
 gem 'sass-rails'
 
+# for uploading images
+gem 'carrierwave'
+
+gem 'figaro'
+
+# for carrierwave to connect to S3
+gem 'fog'
+
 # for user authentication
 gem 'devise','>= 3.2.4'
 
