@@ -19,6 +19,12 @@ gem 'figaro'
 # for carrierwave to connect to S3
 gem 'fog'
 
+# for image manipulation
+gem 'mini_magick', '~> 4.3.1'
+
+# for video uploading
+gem 'carrierwave-aws'
+
 # for user authentication
 gem 'devise','>= 3.2.4'
 

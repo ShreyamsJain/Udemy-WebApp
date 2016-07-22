@@ -25,7 +25,7 @@
         <%= section.title %>
         <% section.lessons.each do |lesson| %>
           <div class="lesson">
-            <% link_to lesson_path(lesson) do %>
+            <%= link_to lesson_path(lesson) do %>
             <b><%= lesson.title %></b>
             -
             <%= lesson.subtitle %>
