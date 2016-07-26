@@ -30,6 +30,9 @@ gem 'carrierwave-aws'
 # for user authentication
 gem 'devise','>= 3.2.4'
 
+# for ordering row
+gem 'ranked-model'
+
 # for simple form
 gem 'simple_form'
 
