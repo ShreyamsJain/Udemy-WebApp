@@ -11,6 +11,9 @@ gem 'bootstrap-sass', '~> 3.3.5.1'
 gem 'sprockets', '2.11.0'
 gem 'sass-rails'
 
+# for jquery UI , dragabble
+gem 'jquery-ui-rails'
+
 gem 'stripe'
 
 # for uploading images
