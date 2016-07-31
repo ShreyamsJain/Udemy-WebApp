@@ -12,7 +12,7 @@ Udemy::Application.routes.draw do
     resources :sections, only: [:update]
     resources :lessons, only: [:update]
     resources :sections, only: [] do
-      resources :lessons, only: [:new, :create, :destroy]
+      resources :lessons, only: [:create, :destroy]
     end
     resources :courses, only: [:new, :create, :show, :destroy] do
       resources :sections, only: [:create, :destroy]
