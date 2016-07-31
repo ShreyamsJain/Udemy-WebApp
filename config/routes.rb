@@ -1,6 +1,7 @@
 Udemy::Application.routes.draw do
 
   devise_for :users
+  resource :dashboard, only: [:show]
   root 'static_pages#index'
 
   resources :courses, only: [:index, :show] do
@@ -14,7 +15,7 @@ Udemy::Application.routes.draw do
       resources :lessons, only: [:new, :create, :destroy]
     end
     resources :courses, only: [:new, :create, :show, :destroy] do
-      resources :sections, only: [:new, :create, :destroy]
+      resources :sections, only: [:create, :destroy]
     end
   end
   # The priority is based upon order of creation: first created -> highest priority.
