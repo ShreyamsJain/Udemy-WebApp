@@ -32,9 +32,13 @@
 <div class="booyah-box col-xs-10 col-xs-offset-1">
   <h1 class="text-center"><%= current_course.title %></h1>
   <%= image_tag current_course.image, class: 'img-responsive' %>
-  <%= link_to 'Preview As Student...', course_path(current_course), class: 'btn btn-warning pull-right' %>
   <br class="clr" />
-
+  <%= link_to 'Preview As Student...', course_path(current_course), class: 'btn btn-warning pull-right' %>
+  <br class="clr"/>
+  <% if current_user && current_user = current_course.user %>
+     <%= link_to 'Destroy Course', instructor_course_path(current_course), method: :delete, data: {confirm: 'Are you sure you want to delete this?'}, class: 'pull-right btn btn-danger' %>
+  <% end %>
+  <br class="clr"/>
   <div class="text-center">
     <!-- Button trigger modal -->
     <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#newSectionModal">
@@ -42,9 +46,6 @@
     </button>
   </div>
 
-  <% if current_user && current_user = current_course.user %>
-     <%= link_to 'Destroy', instructor_course_path(current_course), method: :delete, data: {confirm: 'Are you sure you want to delete this?'}, class: 'pull-right btn btn-danger' %>
-  <% end %>
 
   <ul class="sections">
     <% current_course.sections.rank(:row_order).each do |section| %>
