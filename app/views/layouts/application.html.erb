@@ -25,7 +25,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Udemy</a>
+      <%= link_to 'Udemy', root_path , class: 'navbar-brand' %>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -57,9 +57,45 @@
 <br class="clr" />
   <div id="footer">
     <div class="container">
-      <b>Teachers</b>
-      <br />
-      <%= link_to 'Take a course', new_instructor_course_path %>
+      <div class="col-xs-12 col-sm-3">
+        <b>Teachers</b>
+        <br />
+        <%= link_to 'Take a course', new_instructor_course_path %>
+        <br />
+        <%= link_to 'My Dashboard', dashboard_path %>
+      </div>
+      <div class="col-xs-12 col-sm-3">
+          <b>About</b>
+          <br />
+          <%= link_to 'Team', team_path %>
+          <br />
+          <%= link_to 'Careers', careers_path %>
+          <br />
+          <%= link_to 'Privacy Policy', privacy_path %>
+      </div>
+      <div class="col-xs-12 col-sm-3">
+          <b>Contact</b>
+          <br />
+          shreyams.jain99@gmail.com
+          <br />
+          San Jose State University
+          <br />
+          San Jose CA, 95110
+      </div>
+      <div class="col-xs-12 col-sm-3 social">
+          <b>Social</b>
+          <br/>
+          <br/>
+          <%= link_to 'https://github.com/ShreyamsJain' do %>
+            <%= image_tag 'github.png', class: 'social-button' %>
+          <% end %>
+          <%= link_to 'https://twitter.com/Shreyams_Jain' do %>
+            <%= image_tag 'facebook.png', class: 'social-button' %>
+          <% end %>
+          <%= link_to 'https://www.facebook.com/shreyams' do %>
+            <%= image_tag 'twitter.png', class: 'social-button' %>
+          <% end %>
+      </div>
     </div>
   </div>
 </body>
